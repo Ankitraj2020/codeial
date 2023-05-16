@@ -9,6 +9,8 @@ console.log('router loaded');
 
 //added
 router.get('/',homeController.home);
+router.use('/users',require('./users'));
+router.use('/users',require('./post'));
 
 
 
