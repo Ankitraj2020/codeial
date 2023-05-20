@@ -1,8 +1,5 @@
 #posts-list-container {
-  background-color: aqua;
   display: block; }
-  #posts-list-container ul {
-    text-decoration: underline; }
   #posts-list-container li {
     display: block;
     list-style-type: decimal; }
