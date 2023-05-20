@@ -1,0 +1,14 @@
+#posts-list-container{
+    background-color: aqua;
+    display: block;
+    ul{
+        text-decoration: underline;
+        //display: block;
+    }
+    li{
+        display: block;
+        //list-style-type: circle;
+        list-style-type: decimal;
+        //text-decoration:none;
+    }
+}

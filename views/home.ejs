@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/css/home.css">
+
 <h1>codeial /<%=title%> </h1>
 
 <section id="feed-posts">
@@ -10,14 +12,14 @@
     </form>
     <%}%>
     <div id="posts-list-container">
-        <ul>
+        <ul >
             <%for(post of posts){ %> 
                 <li>
                     <div><%=post.content%></div>
                     <p><%=post.user.name%></p>
                     
                     
-                </li><br>
+                </li>
                 
                 <%}%>
         </ul>
