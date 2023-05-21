@@ -30,3 +30,24 @@ module.exports.create = function(req,res){
         return res.redirect('back');
     });*/
 }
+module.exports.destroy = function(req,res){
+    Comment.findById(req.params.id,function(err,comment){
+        //.id means converting the object id into string
+        if(comment.user==req.user.id){
+            let postId = comment.post;
+
+            comment.remove();
+            Post.findById(postId,{$pull:{comments:req.params.id}},function(err,post){
+                return res.redirect('back');
+            });
+            
+            
+
+            /*comment.deleteMany({post:req.params.id},function(err){
+                return res.redirect('back');
+            });*/
+        }else{
+            return res.redirect('back');
+        }
+    });
+}

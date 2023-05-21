@@ -3,3 +3,10 @@
   #posts-list-container li {
     display: block;
     list-style-type: decimal; }
+
+.table {
+  width: 15vw;
+  height: 10vh;
+  background-color: chartreuse;
+  display: inline-block;
+  font-size: large; }
