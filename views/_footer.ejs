@@ -1,5 +1,12 @@
 <footer>
     <h1>Ankit raj</h1>
     <a href="/">Home</a>
-    <a href="/users/profile"> profile</a>
+    <%if(locals.user){%>
+        <a href="/users/profile/<%=user.id%>"> profile</a>
+
+        <%}else{%>
+            <a href="/users/profile/"> profile</a>
+
+        <%}%>
+    
 </footer>
