@@ -1,5 +1,27 @@
 #home-container{
+    font-size: larger;
     display: flex;
+    #feed-posts{
+        width: 70%;
+        padding: 10px;
+    }
+    #user-friends{
+        width: 30%;
+        padding: 10px;
+        border-left: 1px solid lightgrey;
+        height: 100%;
+    }
+    .postl{
+        border: 1px solid black;
+        margin:2px;
+        text-align: center;
+    }
+    #name{
+        background-color: antiquewhite;
+    }
+    
+    
+    
 }
 
 
@@ -8,7 +30,9 @@
 
 
 
-/*#posts-list-container{
+
+
+/*#posts-list-container{ 
     //background-color: aqua;
     display: block;
     ul{

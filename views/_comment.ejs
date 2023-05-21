@@ -1,13 +1,13 @@
 <li>
-    <p>
+    <p class="alig">
         <%if ((locals.user)&&(locals.user.id==comment.user.id)){%>
             <small>
                 <a href="/comments/destroy/<%=comment.id%>"><i class="fa fa-times"></i></a>
             </small>
             <%}%>
         
-        <%=comment.content%><br>
-        <small>
+        <div class="postl"><%=comment.content%></div>
+        <small id="name">
             <span>name -></span>
             <%=comment.user.name%>
         </small>
