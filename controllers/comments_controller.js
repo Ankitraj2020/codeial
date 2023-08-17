@@ -1,3 +1,6 @@
+
+
+
 const Comment = require('../models/comment');
 const Post = require('../models/post');
 
@@ -26,10 +29,10 @@ module.exports.create =  async function(req,res){
                         message: "Post created!"
                     });
                 }*/
-                req.flash('success','comment created successfully');
+               req.flash('success','comment created successfully');
                 res.redirect('/');
 
-        }
+      }
 
     }catch(err){
         req.flash('error',err);
@@ -60,7 +63,7 @@ module.exports.destroy =  async function(req,res){
             comment.remove();
             let post =  Post.findByIdAndUpdate(postId,{$pull:{comments:req.params.id}});
 
-           /* if (req.xhr){
+           /*if (req.xhr){
                 return res.status(200).json({
                     data: {
                         comment_id: req.params.id
@@ -73,9 +76,9 @@ module.exports.destroy =  async function(req,res){
             
             
     
-            /*comment.deleteMany({post:req.params.id},function(err){
+            comment.deleteMany({post:req.params.id},function(err){
                 return res.redirect('back');
-            });*/
+            });
         }else{
             req.flash('error','something error occur while deleting comment');
             return res.redirect('back');

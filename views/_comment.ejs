@@ -1,3 +1,6 @@
+
+
+
 <li id="comment-<%=comment._id%>">
     <p class="alig">
         <%if ((locals.user)&&(locals.user.id==comment.user.id)){%>
@@ -8,9 +11,10 @@
         
         <div class="postl"><%=comment.content%></div>
         <small id="name">
-            <span>name -></span>
+            <span>namet -></span>
             <%=comment.user.name%>
         </small>
 
     </p>
 </li>
+
